@@ -1,0 +1,14 @@
+# Practical 2 (Dining Philosophers) test commands
+
+# Build
+scalac -classpath . "Lab 2/DiningPhilosophers.scala"
+
+# Run all variants (required + optional) with finite meals
+scala -classpath . DiningPhilosophersTest 5 20
+# Expected:
+# - "Lab2 tests passed for n=5, meals=20"
+# - Per-variant counts where each philosopher has 20 meals.
+
+# Expected-failure precondition check
+scala -classpath . -e 'DiningPhilosophers.RunConfig(philosophers = 1)'
+# Expected: java.lang.IllegalArgumentException: requirement failed

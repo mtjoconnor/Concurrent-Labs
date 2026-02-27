@@ -1,0 +1,16 @@
+# Practical 1 (Sorting Networks) test commands
+
+# Build
+scalac -classpath . "Lab 1/SortingNetworks.scala"
+
+# Required randomized tests (success path)
+scala -classpath . SortingNetworksTest 500 500 500
+# Expected: line similar to:
+# Lab1 tests passed: sort4=500, insert=500, insertionSort=500
+
+# Expected-failure precondition checks
+scala -classpath . -e 'SortingNetworks.sort4(Nil, Nil)'
+# Expected: java.lang.IllegalArgumentException: requirement failed
+
+scala -classpath . -e 'SortingNetworks.insertionSort(List(new ox.scl.channel.SyncChan[Int]), List(new ox.scl.channel.SyncChan[Int]))'
+# Expected: java.lang.IllegalArgumentException: requirement failed

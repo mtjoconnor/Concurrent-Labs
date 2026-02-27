@@ -1,0 +1,17 @@
+# Practical 3 (Concurrent DFS Sudoku) test commands
+
+# Build
+cd "Lab 3/Distribution"
+scalac -classpath .:../.. GraphSearch.scala ConcGraphSearch.scala Partial.scala Sudoku.scala
+
+# Positive path: concurrent solver on provided solvable puzzle
+scala -classpath .:../.. Sudoku test1.sud --conc
+# Expected: solved 9x9 grid (same solution as sequential version).
+
+# Additional positive path on harder puzzle
+scala -classpath .:../.. Sudoku test10.sud --conc
+# Expected: solved 9x9 grid.
+
+# Optional no-solution handling path
+scala -classpath .:../.. Sudoku impossible.sud --conc
+# Expected: No solution found

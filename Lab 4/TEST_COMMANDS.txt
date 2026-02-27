@@ -1,0 +1,13 @@
+# Practical 4 (Sleeping Tutor) test commands
+
+# Build
+scalac -classpath . "Lab 4/SleepingTutor.scala"
+
+# Run protocol tests on both implementations
+scala -classpath . SleepingTutorTest 30
+# Expected:
+# Lab4 tests passed for 30 cycles (monitor + semaphore)
+
+# Optional simulation run (manual observation)
+scala -classpath . SleepingTutorSimulation
+# Expected: repeating logs showing tutor waits, starts after two arrivals, ends tutorial, then students leave.
