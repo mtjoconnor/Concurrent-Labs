@@ -8,17 +8,6 @@ These labs use:
 - Scala 2.13
 - SCL (`ox` package) available in this repository at `./ox`
 
-Lecture 1 setup guidance applied:
-1. Install Scala 2.13.
-   - Example on macOS: `brew install scala@2.13`
-2. Ensure classpath includes the local `ox` folder.
-   - One-off: use `-classpath .` when running from repository root.
-   - Optional shell config:
-     - `export CLASSPATH=.:/absolute/path/to/Concurrent Programming:$CLASSPATH`
-
-The local environment used for validation:
-- `scala 2.13.17`
-- `scalac 2.13.17`
 
 ## Repository Layout
 - `Lab 1/`: Sorting networks (comparator, sort4, insertion-based network sort).
